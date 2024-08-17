@@ -2,11 +2,14 @@
   "name": "thealgorithms",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sanjibnarzary.github.io/algorithms",
   "description": "The Algorithms website providing GitHub's largest open-source algorithm library.",
   "repository": "https://github.com/TheAlgorithms/website.git",
   "author": "Malte Jürgens <maltejur@dismail.de>",
   "license": "MIT",
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "fetch-algorithms": "ts-node scripts/fetch-algorithms.ts",
@@ -84,6 +87,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "gh-pages": "^6.1.1",
     "prettier": "^2.6.2",
     "ts-node": "^10.8.0",
     "typescript": "^4.6.4"
